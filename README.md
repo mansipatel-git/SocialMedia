@@ -1,22 +1,55 @@
-# SocialMedia
+# 📱 C++ Social Network Simulator
 
-🧠 Features
-✅ User creation and profile display
+This is a terminal-based simulation of a social media platform built in C++. It supports features like user creation, following, posting, liking, commenting, direct messaging, mutual friend detection, trending post display, and shortest path search between users (BFS on the follow graph).
 
-✅ Following/unfollowing users
+---
 
-✅ Creating posts with content
+## 🧠 Features
 
-✅ Liking and commenting on posts
+- ✅ Create user accounts  
+- ✅ Follow/unfollow other users  
+- ✅ Create and manage posts  
+- ✅ Like and comment on posts  
+- ✅ Send and view private messages  
+- ✅ Find mutual friends  
+- ✅ Find shortest connection path  
+- ✅ View trending posts (by likes)  
+- ✅ Display user profile and activity  
 
-✅ Direct messaging between users
+---
 
-✅ Viewing messages from other users
+## 🏗️ Architecture Overview
 
-✅ Finding shortest path between two users
+### Post
+- Contains: post ID, content, likes, comments
+- Methods: `addLike()`, `addComment()`
 
-✅ Finding mutual friends
+### User
+- Contains: username, followers, followings, posts, messages
+- Methods: `follow()`, `addPost()`, `likePost()`, `commentOnPost()`, `sendMessage()`, `viewMessagesFrom()`
 
-✅ Displaying trending posts
+### SocialNetwork
+- Manages all users and interactions
+- Features: Add user, follow user, create post, like/comment, send/view messages, mutual friends, shortest path, trending posts
 
-✅ Text-based interactive menu
+---
+### Menu Option
+1. Add User
+2. Follow User
+3. Post
+4. Like Post
+5. Comment
+6. Send Message
+7. View Messages
+8. Shortest Path
+9. Mutual Friends
+10. Trending Posts
+11. Show User Info
+12. Exit
+
+
+## 🛠️ How to Compile & Run
+
+```bash
+g++ -std=c++17 -o social_network main.cpp
+./social_network
